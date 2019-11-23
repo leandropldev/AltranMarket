@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@lombok.Generated
 @Document("tb_carrinho")
 public class CarrinhoEntity implements Serializable {
 

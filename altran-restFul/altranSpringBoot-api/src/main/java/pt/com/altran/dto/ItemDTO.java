@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@lombok.Generated
 public class ItemDTO implements Serializable {
 	
 	private static final long serialVersionUID = 1L;

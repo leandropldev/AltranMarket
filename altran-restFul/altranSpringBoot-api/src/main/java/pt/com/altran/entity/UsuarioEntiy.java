@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@lombok.Generated
 @Document("tb_users")
 public class UsuarioEntiy implements Serializable {
 	

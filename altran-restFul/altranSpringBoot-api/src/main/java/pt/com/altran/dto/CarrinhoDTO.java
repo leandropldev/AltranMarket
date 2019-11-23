@@ -15,6 +15,7 @@ import pt.com.altran.entity.UsuarioEntiy;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@lombok.Generated
 public class CarrinhoDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private long id;
