@@ -3,6 +3,7 @@ package pt.com.altran.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,8 +25,8 @@ public class UsuariosController {
 	private UsuarioService service;
 	
 	@PostMapping
-	public UsuarioDTO create(@RequestBody UsuarioDTO item) {
-		return service.create(item);
+	public ResponseEntity<UsuarioDTO> create(@RequestBody UsuarioDTO item) {
+		return new ResponseEntity<>(service.create(item), HttpStatus.CREATED);
 	}
 	
 	@GetMapping
