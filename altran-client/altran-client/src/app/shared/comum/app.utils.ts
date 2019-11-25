@@ -1,6 +1,7 @@
 import { HttpHeaders } from '@angular/common/http'; 
 
-export const BASE_URL = 'http://localhost:8080/usuarios';
+export const BASE_URL = 'https://altran-api.herokuapp.com/';
+export const BASE_URL_USUARIOS = 'https://altran-api.herokuapp.com/' + 'usuarios';
 
 export const URL_TOKEN = BASE_URL + 'oauth/token'; 
 export const REGISTER_URL = BASE_URL + 'api/public/registration/users';

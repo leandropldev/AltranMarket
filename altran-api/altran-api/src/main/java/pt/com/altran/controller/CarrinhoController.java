@@ -12,26 +12,32 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import pt.com.altran.dto.CarrinhoDTO;
 import pt.com.altran.service.CarrinhoService;
 
 @RestController
 @RequestMapping("/carrinho")
+@Api(value = "Carrinho EndPoint", description = "REST API for Carrinho", tags = { "CarrinhoEndpoint" })
 public class CarrinhoController {
 
 	@Autowired
 	private CarrinhoService service;
 	
+	@ApiOperation(value = "Create Cart")
 	@PostMapping
 	public ResponseEntity<CarrinhoDTO> create(@RequestBody CarrinhoDTO carrinho) {
 		return new ResponseEntity<>(service.create(carrinho), HttpStatus.CREATED);
 	}
 	
+	@ApiOperation(value = "List Cart")
 	@GetMapping
 	public List<CarrinhoDTO> findAll() {
 		return service.findAll();
 	}
-
+	
+	@ApiOperation(value = "List Cart by Id")
 	@GetMapping("/{id}")
 	public CarrinhoDTO findById(@PathVariable("id") Long id) {
 		return service.findById(id);

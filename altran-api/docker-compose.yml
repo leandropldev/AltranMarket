@@ -1,0 +1,21 @@
+version: '3.4'
+services:
+  altran-api:
+    image: leandropldev/altran-api
+    restart: always
+    build: ./altran-api
+    working_dir: /altran-api
+    environment:
+      TZ: America/Sao_Paulo
+      SPRING_BOOT_ENVIRONMENT: Production
+    volumes:
+      - ./altran-api:/altran-api
+      - ~/.m2:/root/.m2
+    ports:
+      - "8080:8080"
+    command: mvn clean spring-boot:run
+    networks:
+      - altran-network
+networks:
+    altran-network:
+        driver: bridge

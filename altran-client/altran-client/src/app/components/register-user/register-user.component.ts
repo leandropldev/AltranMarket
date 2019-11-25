@@ -20,8 +20,8 @@ export class RegisterUserComponent implements OnInit {
   save(): void {
     this.apiService.registerUser(this.user).subscribe(data => {
       console.log('Usuários registrado com sucesso!');
-      this.goBack();
-      //this.router.navigate(['list-user']);
+      //this.goBack();
+      this.router.navigate(['list-user']);
     }, error => {
       console.log('Error ao criar usuário ', error);
     });

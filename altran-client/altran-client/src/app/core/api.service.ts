@@ -36,22 +36,22 @@ export class ApiService {
   }
 
   registerUser(user: Usuario): Observable<any> {
-    return this.httpClient.post<any>(AppUtils.BASE_URL, user, {headers: AppUtils.HEADERS_EMPTY});
+    return this.httpClient.post<any>(AppUtils.BASE_URL_USUARIOS, user, {headers: AppUtils.HEADERS_EMPTY});
   } 
 
   getUsers(): Observable<any> {
-    return this.httpClient.get<any>(AppUtils.BASE_URL);
+    return this.httpClient.get<any>(AppUtils.BASE_URL_USUARIOS);
   }
 
   deleteUser(id: string): Observable<any> {
-    return this.httpClient.delete<any>(AppUtils.BASE_URL +"/"+ id, {headers: AppUtils.HEADERS_EMPTY});
+    return this.httpClient.delete<any>(AppUtils.BASE_URL_USUARIOS +"/"+ id, {headers: AppUtils.HEADERS_EMPTY});
   }
 
   getUserById(id: string): Observable<any> {
-    return this.httpClient.get<any>(AppUtils.BASE_URL +"/"+ id, {headers: AppUtils.HEADERS_EMPTY});
+    return this.httpClient.get<any>(AppUtils.BASE_URL_USUARIOS +"/"+ id, {headers: AppUtils.HEADERS_EMPTY});
   }
 
   updateUser(user: Usuario): Observable<any> {
-    return this.httpClient.put<any>(AppUtils.BASE_URL, user, {headers: AppUtils.HEADERS_EMPTY});
+    return this.httpClient.put<any>(AppUtils.BASE_URL_USUARIOS, user, {headers: AppUtils.HEADERS_EMPTY});
   }
 }
