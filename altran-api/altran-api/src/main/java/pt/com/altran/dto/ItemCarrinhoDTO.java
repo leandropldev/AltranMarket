@@ -1,8 +1,6 @@
 package pt.com.altran.dto;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,11 +12,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @lombok.Generated
-public class CarrinhoDTO implements Serializable {
+public class ItemCarrinhoDTO implements Serializable{
+
 	private static final long serialVersionUID = 1L;
 	private long id;
-	private UsuarioDTO usuario;
-	@Builder.Default
-	private List<ItemCarrinhoDTO> itens = new ArrayList<>();
-	private double valor_total;
+	private String nome;
+	private double valor_unitario;
+	private int quantidade;
+	private double valor_somado;
 }
