@@ -5,16 +5,20 @@ Projeto Spring - Angular para carrinho de compras
 - ## Back end:
 **Instrução para acessar da nuvem (heroku):**
 1) Acesse o link: https://altran-api.herokuapp.com/api/swagger-ui.html
+
 Documentação com todos os recursos disponibilizados pela aplicação
 
 **Instrução para rodar pelo docker:**
 Url da imagem: https://hub.docker.com/repository/docker/leandropldev/altran-api
 1) no prompt, execute: 
 	> docker pull leandropldev/altran-api
+	
 	> docker ps -a
+	
 	> docker start <CONTAINER_ID> id da imagem baixada
 	
 2) Acesse o link: http://localhost:8080/api/swagger-ui.html
+
 Documentação com todos os recursos disponibilizados pela aplicação
 
 **Instrução para rodar localmente:**
@@ -25,6 +29,7 @@ Documentação com todos os recursos disponibilizados pela aplicação
 3) Acesse a pasta target e execute o comando:
 	> java -jar altranSpringBoot-api-0.0.1-SNAPSHOT.jar
 4) Acesse o link: http://localhost:8080/api/swagger-ui.html
+
 Documentação com todos os recursos disponibilizados pela aplicação
 
 - ## Front end:
