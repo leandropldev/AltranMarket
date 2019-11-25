@@ -42,4 +42,16 @@ export class ApiService {
   getUsers(): Observable<any> {
     return this.httpClient.get<any>(AppUtils.BASE_URL);
   }
+
+  deleteUser(id: string): Observable<any> {
+    return this.httpClient.delete<any>(AppUtils.BASE_URL +"/"+ id, {headers: AppUtils.HEADERS_EMPTY});
+  }
+
+  getUserById(id: string): Observable<any> {
+    return this.httpClient.get<any>(AppUtils.BASE_URL +"/"+ id, {headers: AppUtils.HEADERS_EMPTY});
+  }
+
+  updateUser(user: Usuario): Observable<any> {
+    return this.httpClient.put<any>(AppUtils.BASE_URL, user, {headers: AppUtils.HEADERS_EMPTY});
+  }
 }

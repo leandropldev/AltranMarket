@@ -4,7 +4,6 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginUserComponent } from './components/login-user/login-user.component';
 import { RegisterUserComponent } from './components/register-user/register-user.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
 import { ListUserComponent } from './components/list-user/list-user.component';
@@ -20,7 +19,6 @@ import { RegisterCarrinhoComponent } from './components/register-carrinho/regist
 @NgModule({
   declarations: [
     AppComponent,
-    LoginUserComponent,
     RegisterUserComponent,
     EditUserComponent,
     ListUserComponent,

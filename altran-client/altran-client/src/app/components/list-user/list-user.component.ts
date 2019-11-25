@@ -19,5 +19,13 @@ export class ListUserComponent implements OnInit {
       console.log('Error ao pegar a lista de usuários! ', error);
     });
   }
+  
+  deleteUser(user: Usuario): void {
+    this.apiService.deleteUser(user.id).subscribe(() => {
+      this.users = this.users.filter(u => u.id !== user.id);
 
+    }, error => {
+      console.log('Error ao deletar usuário! ', error);
+    });
+  }
 }
