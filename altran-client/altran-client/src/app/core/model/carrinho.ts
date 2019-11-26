@@ -1,8 +1,8 @@
 import { Usuario } from './usuario';
-import { Item } from './item';
+import { ItemCarrinho } from './itemCarrinho';
 
 export class Carrinho {
     id?: string;
     usuario: Usuario;
-    itens: Array<Item>; 
+    itens: Array<ItemCarrinho>; 
 }

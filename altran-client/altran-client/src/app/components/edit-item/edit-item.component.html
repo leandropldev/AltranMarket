@@ -1,0 +1,25 @@
+<section class="grey-text w-responsive mx-auto p-5">
+    <form (ngSubmit)="update()" #detailItemForm="ngForm">
+        <h4 class="h4 mb-4 text-center"><span class="badge badge-light "> Editar Item: {{itemRecebido.id}}</span></h4>
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" id="nome" required [(ngModel)]="itemRecebido.nome" name="nome" #nome="ngModel">
+            <div [hidden]="nome.valid || nome.pristine"
+                    class="alert alert-danger">
+                    Favor digitar o nome
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Valor</label>
+            <input type="text" class="form-control" id="valor" required [(ngModel)]="itemRecebido.valor" name="valor" #valor="ngModel">
+            <div [hidden]="valor.valid || valor.pristine" class="alert alert-danger"> Favor digitar o valor </div>
+        </div>
+    
+        <div  class="btn-group btn-group-sm">
+            <button type="button" class="btn btn-dark" (click)="goBack()">Voltar</button> | 
+            <button type="submit" class="btn btn-dark" [disabled]="!detailItemForm.form.valid">Atualizar</button>
+        </div>
+    
+    </form>
+</section>

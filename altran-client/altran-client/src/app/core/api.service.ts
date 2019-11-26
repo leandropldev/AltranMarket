@@ -5,6 +5,7 @@ import * as AppUtils from '../shared/comum/app.utils';
 import { HttpParams, HttpClient } from '@angular/common/http';
 import { UserLogin } from './model/userLogin';
 import { Usuario } from './model/usuario';
+import { Item } from './model/item';
 
 
 @Injectable({
@@ -31,6 +32,9 @@ export class ApiService {
       return this.httpClient.post(AppUtils.URL_TOKEN, null, options);
   }
 
+  /*
+    USUARIO SERVICE
+  */
   getMainUser(token: any): Observable<any> {
     return this.httpClient.get<any>(`${this.baseUrl}` + '/main', AppUtils.OPTIONS_OBJECTO);
   }
@@ -54,4 +58,33 @@ export class ApiService {
   updateUser(user: Usuario): Observable<any> {
     return this.httpClient.put<any>(AppUtils.BASE_URL_USUARIOS, user, {headers: AppUtils.HEADERS_EMPTY});
   }
+
+  /*
+    ITEM SERVICE
+  */
+  registerItem(item: Item): Observable<any> {
+    return this.httpClient.post<any>(AppUtils.BASE_URL_ITEMS, item, {headers: AppUtils.HEADERS_EMPTY});
+  }
+  
+  getItens(): Observable<any> {
+    return this.httpClient.get<any>(AppUtils.BASE_URL_ITEMS);
+  }
+
+  deleteItem(id: string): Observable<any> {
+    return this.httpClient.delete<any>(AppUtils.BASE_URL_ITEMS +"/"+ id, {headers: AppUtils.HEADERS_EMPTY});
+  }
+
+  getItemById(id: string): Observable<any> {
+    return this.httpClient.get<any>(AppUtils.BASE_URL_ITEMS +"/"+ id, {headers: AppUtils.HEADERS_EMPTY});
+  }
+
+  updateItem(item: Item): Observable<any> {
+    return this.httpClient.put<any>(AppUtils.BASE_URL_ITEMS, item, {headers: AppUtils.HEADERS_EMPTY});
+  }
+
+  /*
+    CARRINHO SERVICE
+  */
+
+
 }

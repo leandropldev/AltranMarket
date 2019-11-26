@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/core/api.service';
+import { Location } from '@angular/common';
+import { Item } from 'src/app/core/model/item';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-itens',
@@ -6,10 +10,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register-itens.component.sass']
 })
 export class RegisterItensComponent implements OnInit {
-
-  constructor() { }
+  
+  public item = new Item();
+  constructor(private apiService: ApiService, private location: Location, private router: Router) { }
 
   ngOnInit() {
   }
 
+  save(): void {
+ 
+    this.apiService.registerItem(this.item).subscribe(item => {
+      console.log('Item cadastrado com sucesso!');
+      this.router.navigate(['list-itens']);
+    }, error => {
+      console.log('Error ao cadastrar item ', error);
+    });
+  }
 }

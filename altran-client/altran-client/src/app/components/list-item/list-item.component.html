@@ -1,0 +1,27 @@
+<section class="grey-text w-responsive mx-auto p-5">    
+    <h2 class="h4 mb-4 text-center font-weight-bold"> Lista de Itens</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="hidden">Id</th>
+                <th>Nome</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+            <tbody>
+                <tr *ngFor="let item of items; let i = index;">
+                    <td class="hidden">{{i+1}}</td>
+                    <td>{{item.nome}}</td>
+                    <td>{{item.valor}}</td>
+                    <td>
+                        <div class="btn-group btn-group-sm">
+                            <button class="btn btn-info " [routerLink]="['/edit-itens', item.id]" style="margin-left: 20px;"> Editar</button>
+                            <button class="btn btn-danger " (click)="deleteItemModal.show()"> Excluir</button>
+                        </div>
+                    </td>
+                    <app-delete-item-modal #deleteItemModal [recebeItem]="item" (resposta)="deleteItem($event)" ></app-delete-item-modal>
+                </tr>
+            </tbody>
+    </table>
+</section>
+      

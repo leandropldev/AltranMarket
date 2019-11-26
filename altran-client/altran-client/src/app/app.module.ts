@@ -15,6 +15,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ApiService } from './core/api.service';
 import { RegisterItensComponent } from './components/register-itens/register-itens.component';
 import { RegisterCarrinhoComponent } from './components/register-carrinho/register-carrinho.component';
+import { ListItemComponent } from './components/list-item/list-item.component';
+import { EditItemComponent } from './components/edit-item/edit-item.component';
+import { DeleteItemModalComponent } from './shared/components/modals/delete-item-modal/delete-item-modal.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { RegisterCarrinhoComponent } from './components/register-carrinho/regist
     HeaderComponent,
     DeleteUserModalComponent,
     RegisterItensComponent,
-    RegisterCarrinhoComponent
+    RegisterCarrinhoComponent,
+    ListItemComponent,
+    EditItemComponent,
+    DeleteItemModalComponent
   ],
   imports: [
     BrowserModule,
