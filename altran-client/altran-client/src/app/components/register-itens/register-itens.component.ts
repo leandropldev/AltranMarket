@@ -18,13 +18,16 @@ export class RegisterItensComponent implements OnInit {
   }
 
   save(): void {
- 
-    this.apiService.registerItem(this.item).subscribe(item => {
-      console.log('Item cadastrado com sucesso!');
-      this.router.navigate(['list-itens']);
-    }, errors => {
-      this.error_msg = errors.error.message;
-      console.log('Error ao cadastrar item ', errors);
-    });
+    if(this.item.valor > 0){
+      this.apiService.registerItem(this.item).subscribe(item => {
+        console.log('Item cadastrado com sucesso!');
+        this.router.navigate(['list-itens']);
+      }, errors => {
+        this.error_msg = errors.error.message;
+        console.log('Error ao cadastrar item ', errors);
+      });
+    } else {
+      this.error_msg = "O valor precisa ser maior que 0!";
+    }
   }
 }

@@ -1,6 +1,8 @@
 # Altran
 Projeto Spring - Angular para carrinho de compras
 ##### Candidato: Leandro Reis
+**Importante:**
+A url heroku pode ser bloqueada em alguns firewalls comportarivos, favor analisar caso a aplicação não abra!
 
 - ## Database:
 Acesse pelo mongo compass
