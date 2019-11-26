@@ -13,7 +13,7 @@ export class RegisterItensComponent implements OnInit {
   
   public item = new Item();
   constructor(private apiService: ApiService, private location: Location, private router: Router) { }
-
+  error_msg:string = "";
   ngOnInit() {
   }
 
@@ -22,8 +22,9 @@ export class RegisterItensComponent implements OnInit {
     this.apiService.registerItem(this.item).subscribe(item => {
       console.log('Item cadastrado com sucesso!');
       this.router.navigate(['list-itens']);
-    }, error => {
-      console.log('Error ao cadastrar item ', error);
+    }, errors => {
+      this.error_msg = errors.error.message;
+      console.log('Error ao cadastrar item ', errors);
     });
   }
 }

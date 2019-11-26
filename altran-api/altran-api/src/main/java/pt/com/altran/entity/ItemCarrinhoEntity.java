@@ -18,9 +18,7 @@ import lombok.NoArgsConstructor;
 public class ItemCarrinhoEntity implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-	private long id;
-	private String nome;
-	private double valor_unitario;
+	ItemEntity item;
 	private int quantidade;
 	private double valor_somado;
 }

@@ -6,6 +6,7 @@ import { HttpParams, HttpClient } from '@angular/common/http';
 import { UserLogin } from './model/userLogin';
 import { Usuario } from './model/usuario';
 import { Item } from './model/item';
+import { Carrinho } from './model/carrinho';
 
 
 @Injectable({
@@ -85,6 +86,8 @@ export class ApiService {
   /*
     CARRINHO SERVICE
   */
-
+  createCarrinho(carrinho: Carrinho): Observable<any>{
+    return this.httpClient.post<any>(AppUtils.BASE_URL_CARRINHO, carrinho, {headers: AppUtils.HEADERS_EMPTY});
+  }
 
 }

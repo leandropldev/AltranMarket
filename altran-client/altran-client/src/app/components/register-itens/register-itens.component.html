@@ -20,7 +20,7 @@
                 Favor digitar o valor do item
             </div>
           </div>
-
+          <div [hidden]="!error_msg" class="alert alert-danger"> {{error_msg}} </div>  
         <button  class="btn btn-dark btn-block" (click)="save()" [disabled]="!RegisterItemForm.form.valid">Enviar</button>
     </form>
   </section>

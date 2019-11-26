@@ -1,7 +1,8 @@
+import { Item } from './item';
+
 export class ItemCarrinho {
     id?: string;
-    nome: string;
-    valor_unitario: string;
+    item: Item;
     quantidade: number;
-    valor_somado: string;
+    valor_somado: Number;
 }

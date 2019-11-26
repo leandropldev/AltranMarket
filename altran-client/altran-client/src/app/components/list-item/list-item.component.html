@@ -17,6 +17,7 @@
                         <div class="btn-group btn-group-sm">
                             <button class="btn btn-info " [routerLink]="['/edit-itens', item.id]" style="margin-left: 20px;"> Editar</button>
                             <button class="btn btn-danger " (click)="deleteItemModal.show()"> Excluir</button>
+                            <button class="btn btn-success " [routerLink]="['/register-carrinho', item.id]" style="margin-left: 20px;"> Comprar</button>
                         </div>
                     </td>
                     <app-delete-item-modal #deleteItemModal [recebeItem]="item" (resposta)="deleteItem($event)" ></app-delete-item-modal>

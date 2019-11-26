@@ -10,7 +10,7 @@
         </thead>
             <tbody>
                 <tr *ngFor="let user of users; let i = index;">
-                    <td class="hidden">{{i+1}}</td>
+                    <td class="hidden">{{user.id}}</td>
                     <td>{{user.nome}}</td>
                     <td>{{user.email}}</td>
                     <td>

@@ -10,14 +10,15 @@ import { ListItemComponent } from './components/list-item/list-item.component';
 import { EditItemComponent } from './components/edit-item/edit-item.component';
 
 const routes: Routes = [ 
-  {path : '', component : WelcomeComponent}, 
+  { path: '', component : WelcomeComponent}, 
   { path: 'register-user', component: RegisterUserComponent },
   { path: 'edit-user/:id', component: EditUserComponent }, 
   { path: 'list-user', component: ListUserComponent }, 
   { path: 'register-itens', component: RegisterItensComponent },
   { path: 'edit-itens/:id', component: EditItemComponent },
   { path: 'list-itens', component: ListItemComponent },  
-  { path: 'register-carrinho', component: RegisterCarrinhoComponent }, 
+  { path: 'register-carrinho/:id', component: RegisterCarrinhoComponent },
+  { path: 'register-carrinho', component: RegisterCarrinhoComponent },
   { path: 'welcome', component: WelcomeComponent }  
 ];
 

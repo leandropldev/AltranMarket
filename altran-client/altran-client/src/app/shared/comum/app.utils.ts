@@ -3,6 +3,7 @@ import { HttpHeaders } from '@angular/common/http';
 export const BASE_URL = 'https://altran-api.herokuapp.com/';
 export const BASE_URL_USUARIOS = 'https://altran-api.herokuapp.com/' + 'usuarios';
 export const BASE_URL_ITEMS = 'https://altran-api.herokuapp.com/' + 'itens';
+export const BASE_URL_CARRINHO = 'https://altran-api.herokuapp.com/' + 'carrinho';
 
 export const URL_TOKEN = BASE_URL + 'oauth/token'; 
 export const REGISTER_URL = BASE_URL + 'api/public/registration/users';

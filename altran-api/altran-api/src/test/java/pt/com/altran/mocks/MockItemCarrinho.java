@@ -8,6 +8,8 @@ import pt.com.altran.entity.ItemCarrinhoEntity;
 
 public class MockItemCarrinho {
 
+	MockItem itemDTO = new MockItem();
+	
 	public ItemCarrinhoDTO mockItemDTO() {
 		return mockCarrinhoDTO(0);
 	}
@@ -34,9 +36,7 @@ public class MockItemCarrinho {
 	
 	private ItemCarrinhoEntity mockItemCarrinhoEntity(Integer number) {
 		return ItemCarrinhoEntity.builder()
-				.id(number.longValue())
-				.nome("Mock Nome " + number)
-				.valor_unitario(number)
+				.item(itemDTO.mockItemEntity())
 				.quantidade(2)
 				.valor_somado(number + number)
 				.build();
@@ -45,9 +45,7 @@ public class MockItemCarrinho {
 	private ItemCarrinhoDTO mockCarrinhoDTO (Integer number) {
 		
 		return ItemCarrinhoDTO.builder()
-				.id(number.longValue())
-				.nome("Mock Nome " + number)
-				.valor_unitario(number)
+				.item(itemDTO.mockItemDTO())				
 				.quantidade(2)
 				.valor_somado(number + number)
 				.build();

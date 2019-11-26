@@ -13,17 +13,17 @@ export class RegisterUserComponent implements OnInit {
 
   public user = new Usuario();
   constructor(private apiService: ApiService, private location: Location, private router: Router) { }
-
+  error_msg: string = "";
   ngOnInit() {
   }
 
   save(): void {
     this.apiService.registerUser(this.user).subscribe(data => {
       console.log('Usuários registrado com sucesso!');
-      //this.goBack();
       this.router.navigate(['list-user']);
-    }, error => {
-      console.log('Error ao criar usuário ', error);
+    }, errors => {
+      this.error_msg = errors.error.message;
+      console.log('Error ao criar usuário ', errors.error.message);
     });
   }
 

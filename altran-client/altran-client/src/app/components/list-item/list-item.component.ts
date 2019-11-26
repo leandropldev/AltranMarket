@@ -14,7 +14,6 @@ export class ListItemComponent implements OnInit {
 
   ngOnInit() {
     this.apiService.getItens().subscribe(item => {
-      console.log(JSON.stringify(item));
       this.items = item;
     }, error => {
       console.log('Error ao pegar a lista de Itens! ', error);
