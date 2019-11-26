@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  altran-client:
+    image: leandropldev/altran-client
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '4200:4200'
