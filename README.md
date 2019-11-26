@@ -2,6 +2,10 @@
 Projeto Spring - Angular para carrinho de compras
 ##### Candidato: Leandro Reis
 
+- ## Database:
+Acesse pelo mongo compass
+> mongodb+srv://admin:admin123@altrandb-rv3ci.mongodb.net/test
+
 - ## Back end:
 **Instrução para acessar da nuvem (heroku):**
 1) Acesse o link: https://altran-api.herokuapp.com/api/swagger-ui.html
@@ -33,3 +37,27 @@ Documentação com todos os recursos disponibilizados pela aplicação
 Documentação com todos os recursos disponibilizados pela aplicação
 
 - ## Front end:
+**Instrução para acessar da nuvem (heroku):**
+1) Acesse o link: https://altran-client.herokuapp.com/
+
+Documentação com todos os recursos disponibilizados pela aplicação
+
+**Instrução para rodar pelo docker:**
+Url da imagem: https://hub.docker.com/repository/docker/leandropldev/altran-client
+1) no prompt, execute: 
+	> docker pull leandropldev/altran-client
+	
+	> docker ps -a
+	
+	> docker start <CONTAINER_ID> id da imagem baixada
+	
+2) Acesse o link: http://localhost:4200/
+
+**Instrução para rodar localmente:**
+1) Faça o download do repositório:
+	> git clone https://github.com/leandropldev/AltranMarket.git
+2) Navegue até a pasta do projeto e execute o comando:
+	> npm install
+	
+	> ng serve
+3) Acesse o link: http://localhost:4200/
