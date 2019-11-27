@@ -2,7 +2,8 @@
 Projeto Spring - Angular para carrinho de compras
 ##### Candidato: Leandro Reis
 **Importante:**
-A url heroku pode ser bloqueada em alguns firewalls corporativos, favor analisar caso a aplicação não abra!
+- A url heroku pode ser bloqueada em alguns firewalls corporativos, favor analisar caso a aplicação não abra!
+- A base mongo atlas as vezes entra em "modo soneca" de alguns reloads para acordar o banco caso necessário
 
 - ## Database:
 Acesse pelo mongo compass
@@ -14,7 +15,7 @@ Acesse pelo mongo compass
 
 Documentação com todos os recursos disponibilizados pela aplicação
 
-**Instrução para rodar pelo docker:**
+**Instrução para rodar p elo docker:**
 Url da imagem: https://hub.docker.com/repository/docker/leandropldev/altran-api
 1) no prompt, execute: 
 	> docker pull leandropldev/altran-api
