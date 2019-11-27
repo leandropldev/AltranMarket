@@ -64,7 +64,7 @@ Url da imagem: https://hub.docker.com/repository/docker/leandropldev/altran-clie
 	> ng serve
 3) Acesse o link: http://localhost:4200/
 
-**Metodologia de trabalho**
+- ## Metodologia de trabalho**
 1) Mapear operações sistêmicas
 2) Modelar collections usuario, item, item_carrinho e carrinho
 3) implementar e expor recursos rest
