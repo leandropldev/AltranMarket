@@ -2,7 +2,7 @@
 Projeto Spring - Angular para carrinho de compras
 ##### Candidato: Leandro Reis
 **Importante:**
-A url heroku pode ser bloqueada em alguns firewalls comportarivos, favor analisar caso a aplicação não abra!
+A url heroku pode ser bloqueada em alguns firewalls corporativos, favor analisar caso a aplicação não abra!
 
 - ## Database:
 Acesse pelo mongo compass
@@ -63,3 +63,12 @@ Url da imagem: https://hub.docker.com/repository/docker/leandropldev/altran-clie
 	
 	> ng serve
 3) Acesse o link: http://localhost:4200/
+
+**Metodologia de trabalho**
+1) Mapear operações sistêmicas
+2) Modelar collections usuario, item, item_carrinho e carrinho
+3) implementar e expor recursos rest
+4) implementar testes unitários (cobertura em 87%)
+5) implementar client para consumir recursos (angular 8)
+6) adicionar suporte a Docker
+7) subir na nuvem
