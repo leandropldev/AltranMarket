@@ -20,9 +20,9 @@ Url da imagem: https://hub.docker.com/repository/docker/leandropldev/altran-api
 1) no prompt, execute: 
 	> docker pull leandropldev/altran-api
 	
-	> docker ps -a
+	> docker images
 	
-	> docker start <CONTAINER_ID> id da imagem baixada
+	> docker run -p 8080:8080 leandropldev/altran-api
 	
 2) Acesse o link: http://localhost:8080/api/swagger-ui.html
 
