@@ -15,13 +15,10 @@ Acesse pelo mongo compass
 
 Documentação com todos os recursos disponibilizados pela aplicação
 
-**Instrução para rodar p elo docker:**
+**Instrução para rodar pelo docker:**
 Url da imagem: https://hub.docker.com/repository/docker/leandropldev/altran-api
 1) no prompt, execute: 
 	> docker pull leandropldev/altran-api
-	
-	> docker images
-	
 	> docker run -p 8080:8080 leandropldev/altran-api
 	
 2) Acesse o link: http://localhost:8080/api/swagger-ui.html
@@ -49,10 +46,7 @@ Documentação com todos os recursos disponibilizados pela aplicação
 Url da imagem: https://hub.docker.com/repository/docker/leandropldev/altran-client
 1) no prompt, execute: 
 	> docker pull leandropldev/altran-client
-	
-	> docker ps -a
-	
-	> docker start <CONTAINER_ID> id da imagem baixada
+	> docker run -it -p 4200:4200 --rm leandropldev/altran-client
 	
 2) Acesse o link: http://localhost:4200/
 
