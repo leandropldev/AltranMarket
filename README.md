@@ -19,6 +19,7 @@ Documentação com todos os recursos disponibilizados pela aplicação
 Url da imagem: https://hub.docker.com/repository/docker/leandropldev/altran-api
 1) no prompt, execute: 
 	> docker pull leandropldev/altran-api
+	
 	> docker run -p 8080:8080 leandropldev/altran-api
 	
 2) Acesse o link: http://localhost:8080/api/swagger-ui.html
@@ -46,6 +47,7 @@ Documentação com todos os recursos disponibilizados pela aplicação
 Url da imagem: https://hub.docker.com/repository/docker/leandropldev/altran-client
 1) no prompt, execute: 
 	> docker pull leandropldev/altran-client
+	
 	> docker run -it -p 4200:4200 --rm leandropldev/altran-client
 	
 2) Acesse o link: http://localhost:4200/
